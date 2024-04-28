@@ -6,6 +6,7 @@ services:
     volumes:
       - /home/elisson/Mycompany/express_frame/docker/database/:/var/lib/postgresql/data
       - /home/elisson/Mycompany/express_frame/docker/tmp:/backups
+      - ./db/database.sql:/docker-entrypoint-initdb.d/database.sql
     environment:
       - POSTGRES_PASSWORD=postgres
       - PGDATA=/var/lib/postgresql/data/pgdata

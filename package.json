@@ -17,7 +17,8 @@
     "passport": "^0.7.0",
     "passport-jwt": "^4.0.1",
     "passport-local": "^1.0.0",
-    "pg": "^8.11.5"
+    "pg": "^8.11.5",
+    "pg-promise": "^11.6.0"
   },
   "devDependencies": {
     "dotenv": "^16.4.5",
