@@ -1,0 +1,21 @@
+services:
+  db:
+    image: "postgres:12"
+    shm_size: 1g
+    restart: always
+    volumes:
+      - /home/elisson/Mycompany/express_frame/docker/database/:/var/lib/postgresql/data
+      - /home/elisson/Mycompany/express_frame/docker/tmp:/backups
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    ports:
+      - 5432:5432
+  pgadmin:
+    image: "dpage/pgadmin4"
+    restart: always
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.com.br
+      - PGADMIN_DEFAULT_PASSWORD=12345678
+    ports:
+      - 54321:80
